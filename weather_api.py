@@ -22,6 +22,18 @@ def get_weather(stationid):
             station_data.append(observation)
     return json.dumps(station_data, indent=4)
 
+@get('/weather/<stationid>/<observationid>')
+@get('/weather/<stationid>/<observationid>/')
+def get_weather(stationid,observationid):
+    response.content_type = "text/JSON"
+    station_data = []
+    if not weather_data:
+        init_data()
+    for observation in weather_data:
+        if observation['station_id'] == stationid and observation['observation_id'] == observationid:
+            station_data.append(observation)
+    return json.dumps(station_data, indent=4)
+
 
 @post('/weather')
 @post('/weather/')
