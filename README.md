@@ -4,36 +4,9 @@ This is a simple web application that uses [bottle](http://bottlepy.org/docs/dev
 
 |API|Method|Example Request|Example Response|
 |---|---|---|---|
-|/weather/\<stations_id\>|GET|_**curl**_ http://localhost:8080/weather/7 |```
-[{
-	"temperature": "68",
-	"observation_id": "4",
-	"observation_time": "2016-11-20T04:15:00+00:00",
-	"station_id": "7",
-	"humidity": "26.7",
-	"precipitation": "5.31"
-}, {
-	"temperature": "68",
-	"observation_id": "9",
-	"observation_time": "2016-11-20T04:15:00+00:00",
-	"station_id": "7",
-	"humidity": "26.7",
-	"precipitation": "5.31"
-}]
-```|
-|/weather/\<stations_id\>|GET|_**curl**_ http://localhost:8080/weather/7/4 |```
-[{
-	"temperature": "68",
-	"observation_id": "4",
-	"observation_time": "2016-11-20T04:15:00+00:00",
-	"station_id": "7",
-	"humidity": "26.7",
-	"precipitation": "5.31"
-}]
-```|
-|/weather|POST|_**curl**_ -X POST -d '{"temperature": "65", "observation_id": "9", "observation_time": "2016-11-20T04:00:00+00:00", "station_id": "8", "humidity": "25.76", "precipitation": "0"}' http://localhost:8080/weather -H "Content-Type: application/json" |```
-[...{"temperature": "65","observation_id": "9","observation_time": "2016-11-20T04:00:00+00:00","station_id": "8","humidity": "25.76","precipitation": "0"}]
-```|
+|/weather/\<stations_id\>|GET|_**curl**_ http://localhost:8080/weather/7 |[{"temperature": "68", "observation_id": "4", "observation_time": "2016-11-20T04:15:00+00:00", "station_id": "7", "humidity": "26.7", "precipitation": "5.31"},{"temperature": "68", "observation_id": "9", "observation_time": "2016-11-20T04:15:00+00:00", "station_id": "7", "humidity": "26.7", "precipitation": "5.31"}]|
+|/weather/\<stations_id\>|GET|_**curl**_ http://localhost:8080/weather/7/4 |[{"temperature": "68", "observation_id": "4", "observation_time": "2016-11-20T04:15:00+00:00", "station_id": "7", "humidity": "26.7", "precipitation": "5.31"}]|
+|/weather|POST|_**curl**_ -X POST -d '{"temperature": "65", "observation_id": "9", "observation_time": "2016-11-20T04:00:00+00:00", "station_id": "8", "humidity": "25.76", "precipitation": "0"}' http://localhost:8080/weather -H "Content-Type: application/json" |[...{"temperature": "65","observation_id": "9","observation_time": "2016-11-20T04:00:00+00:00","station_id": "8","humidity": "25.76","precipitation": "0"}]|
 
 ------------------------------
 
