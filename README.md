@@ -32,7 +32,7 @@ $ pip install nose
 The tests can be run using
 
 ````
-$nosetests
+$ nosetests
 ````
 --------------------------------
 ## Sample Data
